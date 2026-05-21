@@ -1,0 +1,84 @@
+body{
+    font-family: Arial;
+    text-align:center;
+    background:#f0f0f0;
+}
+
+#scene{
+    position:relative;
+    width:700px;
+    height:700px;
+    margin:20px auto;
+    background:#ddd;
+    border:3px solid black;
+    overflow:hidden;
+}
+
+#corridor{
+    position:absolute;
+    left:300px;
+    width:100px;
+    height:100%;
+    background:#bbb;
+}
+
+#gate{
+    position:absolute;
+    bottom:140px;
+    left:300px;
+    width:100px;
+    height:12px;
+    background:black;
+}
+
+.cell{
+    position:absolute;
+    width:216px;
+    height:36px;
+    background:#777;
+    color:white;
+    font-size:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:2px solid #555;
+    box-sizing:border-box;
+}
+
+.targetCell{
+    background:#c62828;
+    font-weight:bold;
+    position:relative;
+}
+
+.targetCell::after{
+    content:"⚡ Cela 07";
+    position:absolute;
+    top:-18px;
+    font-size:14px;
+    color:yellow;
+}
+
+.police{
+    position:absolute;
+    width:26px;
+    height:26px;
+    border-radius:50%;
+    background:#1565c0;
+    color:white;
+    font-size:11px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.controls{
+    margin-top:15px;
+}
+
+button {
+    padding:10px 20px;
+    font-size:16px;
+    margin:5px;
+    cursor:pointer;
+}
