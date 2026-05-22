@@ -1,18 +1,30 @@
-<!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css"> 
-    <title>MBA CELA 10 - Alvo Cela 07</title>
+    <title>Operações Prisão</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+    <script src="script.js"></script>
 </head>
 
 <body>
 
-    <h2>MBA CELA 10 – Alvo: Cela</h2>
+    <div class="title-container">
+        <h2 id="main-title" onblur="this.contentEditable=false">Operações Prisão</h2>
+        <span class="edit-icon" onclick="enableEdit()" title="Editar título">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
+        </span>
+    </div>
+
+    <div class="config-panel">
+        <label for="targetInput">Definir Cela Alvo:</label>
+        <input type="number" id="targetInput" min="1" max="10" placeholder="1-10">
+        <button onclick="updateTarget()">Confirmar Alvo</button>
+    </div>
 
     <div id="scene">
         <div id="corridor"></div>
-        <div id="gate"></div>
     </div>
 
     <div class="controls">
@@ -21,7 +33,5 @@
         <button onclick="resetScene()">Reiniciar</button>
     </div>
 
-    <script src="script.js"></script>
 </body>
-
 </html>
